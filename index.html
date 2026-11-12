@@ -113,9 +113,49 @@
           <p>Real systems I've built. Click any screenshot to see it full size.</p>
         </div>
 
-        <h3 class="group-title">Automation workflows</h3>
-        <div class="grid grid-3">
-          <article class="card project">
+        <div class="filters" id="project-filters" role="group" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All <span class="count">(12)</span></button>
+          <button type="button" class="filter-btn" data-filter="n8n" aria-pressed="false">n8n workflows <span class="count">(7)</span></button>
+          <button type="button" class="filter-btn" data-filter="zapier" aria-pressed="false">Zapier workflows <span class="count">(1)</span></button>
+          <button type="button" class="filter-btn" data-filter="make" aria-pressed="false">Make workflows <span class="count">(1)</span></button>
+          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">AI-built websites &amp; apps <span class="count">(3)</span></button>
+        </div>
+
+        <div class="grid grid-3" id="project-grid">
+          <article class="card project" data-category="n8n">
+            <a class="project-shot" href="images/agency-lead-agent.jpg" target="_blank" rel="noopener">
+              <img src="images/agency-lead-agent.jpg" alt="n8n AI agent with four tools: save lead, book call, mark booked, alert team" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">n8n · Google Gemini · Gmail</span>
+              <h3>AI Lead Qualification &amp; Booking Agent (Demo)</h3>
+              <p>An AI agent that chats with new enquiries and decides when to save a lead, book a call and alert a human. Around it, automations handle reminders, no-show recovery, follow-ups and a weekly report.</p>
+              <p class="result">Demo build: the agent alerts the human team instead of guessing</p>
+            </div>
+          </article>
+          <article class="card project" data-category="n8n">
+            <a class="project-shot shot-site" href="images/lame-setup.jpg" target="_blank" rel="noopener">
+              <img src="images/lame-setup.jpg" alt="Setup screen of the Lame job search agent in n8n, showing its Gemini model and written instructions" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">n8n Agent · Google Gemini · Tavily search</span>
+              <h3>Lame: AI Job Search Agent</h3>
+              <p>An AI agent built in n8n that searches the web for recent job postings, checks today's date so it only shows fresh roles, and writes a tailored CV for the ones I choose. I stay in control: it never applies for me.</p>
+              <a class="more-link" href="images/lame-chat.jpg" target="_blank" rel="noopener">See it in action →</a>
+            </div>
+          </article>
+          <article class="card project" data-category="n8n">
+            <a class="project-shot" href="images/lead-qualification-booking.jpg" target="_blank" rel="noopener">
+              <img src="images/lead-qualification-booking.jpg" alt="Full n8n workflow for the lead qualification and booking demo: AI chat agent, booking reminders, no-show recovery, quiet lead follow-up and weekly report" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">n8n · Google Gemini · Gmail</span>
+              <h3>AI Lead Qualification &amp; Booking System (Demo)</h3>
+              <p>The full system around the agent, in one workflow. It captures and qualifies each enquiry, books the discovery call, sends booking reminders, recovers no-shows, chases quiet leads and emails a weekly report.</p>
+              <p class="result">Demo build: five connected flows, from first message to weekly report</p>
+            </div>
+          </article>
+          <article class="card project" data-category="n8n">
             <a class="project-shot" href="images/feedback-part2.jpg" target="_blank" rel="noopener">
               <img src="images/feedback-part2.jpg" alt="n8n workflow for the Feedback Intelligence Engine: form trigger, AI scoring, routing, Airtable saves and manager email" loading="lazy">
             </a>
@@ -127,7 +167,7 @@
               <p class="result">Tested end to end: unhappy customers trigger an instant email to the branch manager</p>
             </div>
           </article>
-          <article class="card project">
+          <article class="card project" data-category="n8n">
             <a class="project-shot" href="images/job-application-tracker.jpg" target="_blank" rel="noopener">
               <img src="images/job-application-tracker.jpg" alt="n8n Job Application Tracker workflow with steps for new applications, data cleanup and sorting by experience" loading="lazy">
             </a>
@@ -138,7 +178,7 @@
               <p class="result">HR is alerted instantly and no applicant falls through the cracks</p>
             </div>
           </article>
-          <article class="card project">
+          <article class="card project" data-category="n8n">
             <a class="project-shot" href="images/lead-generation.jpg" target="_blank" rel="noopener">
               <img src="images/lead-generation.jpg" alt="n8n Lead Generation workflow: search prospects, score lead with AI, filter, fetch company page, draft email, append to sheet" loading="lazy">
             </a>
@@ -149,7 +189,7 @@
               <p class="result">Drafts are held for a human to approve before anything is sent</p>
             </div>
           </article>
-          <article class="card project">
+          <article class="card project" data-category="n8n">
             <a class="project-shot" href="images/job-search-agent.jpg" target="_blank" rel="noopener">
               <img src="images/job-search-agent.jpg" alt="n8n Job Search Agent workflow: fetch listings, keyword prefilter, AI fit scoring, draft hook, append to sheet" loading="lazy">
             </a>
@@ -160,18 +200,7 @@
               <p class="result">It never applies automatically: a person always makes the final call</p>
             </div>
           </article>
-          <article class="card project">
-            <a class="project-shot shot-light" href="images/make-email-reply.jpg" target="_blank" rel="noopener">
-              <img src="images/make-email-reply.jpg" alt="Make.com Email Reply Scenario: Gmail watch emails, sleep, If-else routing, Make AI Toolkit and Gmail reply modules" loading="lazy">
-            </a>
-            <div class="project-body">
-              <span class="tag">Make.com · Gmail · Make AI Toolkit</span>
-              <h3>AI Email Reply Scenario</h3>
-              <p>Watches the inbox every 15 minutes, uses If-else routing to pick the right reply path, and has Make's AI Toolkit draft a helpful answer inside a tightly constrained prompt so it only says what it should.</p>
-              <p class="result">No one retypes the same answers by hand</p>
-            </div>
-          </article>
-          <article class="card project">
+          <article class="card project" data-category="zapier">
             <a class="project-shot shot-light" href="images/zapier-email-reply.jpg" target="_blank" rel="noopener">
               <img src="images/zapier-email-reply.jpg" alt="Zapier Email Reply with AI Zap: Gmail new email, Delay, AI by Zapier, Gmail reply and Telegram message steps" loading="lazy">
             </a>
@@ -182,11 +211,18 @@
               <p class="result">Every email answered, with a live notification on your phone</p>
             </div>
           </article>
-        </div>
-
-        <h3 class="group-title">AI-built websites &amp; apps</h3>
-        <div class="grid grid-2">
-          <article class="card project">
+          <article class="card project" data-category="make">
+            <a class="project-shot shot-light" href="images/make-email-reply.jpg" target="_blank" rel="noopener">
+              <img src="images/make-email-reply.jpg" alt="Make.com Email Reply Scenario: Gmail watch emails, sleep, If-else routing, Make AI Toolkit and Gmail reply modules" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">Make.com · Gmail · Make AI Toolkit</span>
+              <h3>AI Email Reply Scenario</h3>
+              <p>Watches the inbox every 15 minutes, uses If-else routing to pick the right reply path, and has Make's AI Toolkit draft a helpful answer inside a tightly constrained prompt so it only says what it should.</p>
+              <p class="result">No one retypes the same answers by hand</p>
+            </div>
+          </article>
+          <article class="card project" data-category="web">
             <a class="project-shot shot-site" href="images/hatlove-site.jpg" target="_blank" rel="noopener">
               <img src="images/hatlove-site.jpg" alt="Hatlove Truffles 'n' Decor homepage with a tray of Nigerian small chops" loading="lazy">
             </a>
@@ -197,7 +233,7 @@
               <p class="result">Designed and built with AI (Lovable)</p>
             </div>
           </article>
-          <article class="card project">
+          <article class="card project" data-category="web">
             <a class="project-shot shot-site" href="images/planai.jpg" target="_blank" rel="noopener">
               <img src="images/planai.jpg" alt="PlanAI dashboard with tasks, a calendar and an AI plan tab" loading="lazy">
             </a>
@@ -208,12 +244,46 @@
               <p class="result">In development, not published yet</p>
             </div>
           </article>
+          <article class="card project" data-category="web">
+            <a class="project-shot shot-site" href="images/portfolio-site.jpg" target="_blank" rel="noopener">
+              <img src="images/portfolio-site.jpg" alt="Screenshot of this portfolio website" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">Claude Code · HTML · CSS · GitHub Pages</span>
+              <h3>This portfolio website</h3>
+              <p>Designed and built with Claude Code from plain-English instructions, then reviewed, corrected and published on GitHub Pages.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Working with Claude -->
+    <section id="claude" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Working with Claude</h2>
+          <p>How I use AI in my own work, and where I keep a person in charge.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card service">
+            <h3>Building with Claude Code</h3>
+            <p>I built and edited this portfolio by giving Claude Code instructions, then checking and correcting what it produced.</p>
+          </article>
+          <article class="card service">
+            <h3>Prompting with guardrails</h3>
+            <p>I wrote the instructions for my n8n AI agents so they answer only from approved facts, never invent prices or results, and hand over to a human when unsure.</p>
+          </article>
+          <article class="card service">
+            <h3>AI inside n8n workflows</h3>
+            <p>I have connected AI models (Gemini) to workflows for scoring, drafting and chat, with human approval where it matters.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section">
       <div class="container contact">
         <h2>Let's automate something</h2>
         <p>Tell me which task eats up your week. Based in Nigeria, working with clients worldwide.</p>
@@ -233,6 +303,34 @@
       <p>&copy; 2026 Oluwaferanmi Shalom Adelokun</p>
     </div>
   </footer>
+
+  <!-- Project category filter -->
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('#project-filters .filter-btn');
+      var cards = document.querySelectorAll('#project-grid .project');
+
+      function show(filter) {
+        cards.forEach(function (card) {
+          card.hidden = filter !== 'all' && card.dataset.category !== filter;
+        });
+        buttons.forEach(function (btn) {
+          var active = btn.dataset.filter === filter;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      }
+
+      buttons.forEach(function (btn) {
+        var f = btn.dataset.filter;
+        var n = f === 'all' ? cards.length : document.querySelectorAll('#project-grid .project[data-category="' + f + '"]').length;
+        btn.querySelector('.count').textContent = '(' + n + ')';
+        btn.addEventListener('click', function () { show(f); });
+      });
+
+      show('all');
+    })();
+  </script>
 
 </body>
 </html>

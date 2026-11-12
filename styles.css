@@ -233,6 +233,26 @@ p  { margin: 0 0 1em; }
 .grid + .group-title { margin-top: 56px; }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 
+.project[hidden] { display: none; }
+
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 0 36px; }
+.filter-btn {
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  padding: 0.5em 1.1em;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.filter-btn:hover { color: var(--primary); border-color: var(--primary); }
+.filter-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.filter-btn.is-active { background: var(--primary); border-color: var(--primary); color: #fff; }
+.filter-btn .count { font-weight: 500; opacity: 0.8; }
+
 .project-shot {
   display: flex;
   align-items: center;
