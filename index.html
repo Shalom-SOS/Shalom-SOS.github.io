@@ -115,14 +115,26 @@
         </div>
 
         <div class="filters" id="project-filters" role="group" aria-label="Filter projects by category">
-          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All <span class="count">(12)</span></button>
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All <span class="count">(11)</span></button>
           <button type="button" class="filter-btn" data-filter="n8n" aria-pressed="false">n8n workflows <span class="count">(7)</span></button>
           <button type="button" class="filter-btn" data-filter="zapier" aria-pressed="false">Zapier workflows <span class="count">(1)</span></button>
           <button type="button" class="filter-btn" data-filter="make" aria-pressed="false">Make workflows <span class="count">(1)</span></button>
-          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">AI-built websites &amp; apps <span class="count">(3)</span></button>
+          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">AI-built websites &amp; apps <span class="count">(2)</span></button>
         </div>
 
         <div class="grid grid-3" id="project-grid">
+          <article class="card project" data-category="n8n">
+            <a class="project-shot" href="images/linkedin-writer-agent.jpg" target="_blank" rel="noopener">
+              <img src="images/linkedin-writer-agent.jpg" alt="Diagram of the LinkedIn and X writer agent in n8n: schedule and Telegram feed the agent, which uses a voice skill, web search and two helper workflows" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">n8n Agent · Gemini · Tavily · Telegram · Google Drive · LinkedIn</span>
+              <h3>LinkedIn &amp; X Writer Agent</h3>
+              <p>An agent that writes my LinkedIn and X posts three times a week. It drafts two LinkedIn versions and an X post in my own voice, from recent AI news, my real builds or common client problems, picks a matching screenshot from Google Drive and sends it all to me on Telegram.</p>
+              <a class="more-link" href="images/linkedin-helper-workflows.jpg" target="_blank" rel="noopener">See the two helper workflows that find pictures and publish the post →</a>
+              <p class="result">Nothing is published until I choose a version and approve it in Telegram</p>
+            </div>
+          </article>
           <article class="card project" data-category="n8n">
             <a class="project-shot shot-site" href="images/brightline-lead-agent.jpg" target="_blank" rel="noopener">
               <img src="images/brightline-lead-agent.jpg" alt="n8n AI agent for a marketing agency: instructions, Gemini model and tools for saving leads, booking calls and alerting the team" loading="lazy">
@@ -140,21 +152,22 @@
               <img src="images/lame-setup.jpg" alt="Setup screen of the Lame job search agent in n8n, showing its Gemini model and written instructions" loading="lazy">
             </a>
             <div class="project-body">
-              <span class="tag">n8n Agent · Google Gemini · Tavily search</span>
+              <span class="tag">n8n Agent · Gemini · Tavily · Telegram</span>
               <h3>Lame: AI Job Search Agent</h3>
-              <p>An AI agent built in n8n that searches the web for recent job postings, checks today's date so it only shows fresh roles, and writes a tailored CV for the ones I choose. I stay in control: it never applies for me.</p>
+              <p>My own job-search agent that I chat with on Telegram. It searches LinkedIn, Upwork, remote job boards and African job boards, then filters out roles that are too old, too senior or not open to Nigeria. Every job comes with the pay, exactly how to apply and whether a CV is needed, and it writes a tailored CV when I ask.</p>
               <a class="more-link" href="images/lame-chat.jpg" target="_blank" rel="noopener">See it in action →</a>
+              <p class="result">Built to run on free plans: it limits its own searches, and only shows Upwork jobs from the last 48 hours</p>
             </div>
           </article>
           <article class="card project" data-category="n8n">
-            <a class="project-shot" href="images/lead-qualification-booking.jpg" target="_blank" rel="noopener">
-              <img src="images/lead-qualification-booking.jpg" alt="Full n8n workflow for the lead qualification and booking demo: AI chat agent, booking reminders, no-show recovery, quiet lead follow-up and weekly report" loading="lazy">
+            <a class="project-shot" href="images/hubspot-lead-to-deal.jpg" target="_blank" rel="noopener">
+              <img src="images/hubspot-lead-to-deal.jpg" alt="Diagram of an n8n workflow: new lead form, create or update HubSpot contact, create linked HubSpot deal" loading="lazy">
             </a>
             <div class="project-body">
-              <span class="tag">n8n · Google Gemini · Gmail</span>
-              <h3>AI Lead Qualification &amp; Booking System (Demo)</h3>
-              <p>The full system around the agent, in one workflow. It captures and qualifies each enquiry, books the discovery call, sends booking reminders, recovers no-shows, chases quiet leads and emails a weekly report.</p>
-              <p class="result">Demo build: five connected flows, from first message to weekly report</p>
+              <span class="tag">n8n · HubSpot CRM · n8n Form</span>
+              <h3>HubSpot Lead-to-Deal Workflow</h3>
+              <p>A new enquiry form that feeds HubSpot. Each submission creates or updates the contact by email, so there are no duplicates, then opens a deal in the sales pipeline with the budget as the amount, linked to that contact.</p>
+              <p class="result">Tested end to end: every enquiry becomes a tracked deal with no copy and paste</p>
             </div>
           </article>
           <article class="card project" data-category="n8n">
@@ -189,17 +202,6 @@
               <h3>AI Lead Generation Pipeline</h3>
               <p>Searches the web for businesses that fit the target profile, scores each lead out of 100 with AI, keeps the hot and warm ones, finds their email and drafts personalised outreach.</p>
               <p class="result">Drafts are held for a human to approve before anything is sent</p>
-            </div>
-          </article>
-          <article class="card project" data-category="n8n">
-            <a class="project-shot" href="images/job-search-agent.jpg" target="_blank" rel="noopener">
-              <img src="images/job-search-agent.jpg" alt="n8n Job Search Agent workflow: fetch listings, keyword prefilter, AI fit scoring, draft hook, append to sheet" loading="lazy">
-            </a>
-            <div class="project-body">
-              <span class="tag">n8n · Arbeitnow API · Google Gemini · Google Sheets</span>
-              <h3>AI Job Search Agent</h3>
-              <p>Pulls fresh job listings every day, filters hundreds of them by keyword, scores the fit with AI and drafts an opening hook for the best matches.</p>
-              <p class="result">It never applies automatically: a person always makes the final call</p>
             </div>
           </article>
           <article class="card project" data-category="zapier">
@@ -246,17 +248,7 @@
               <p class="result">In development, not published yet</p>
             </div>
           </article>
-          <article class="card project" data-category="web">
-            <a class="project-shot shot-site" href="images/portfolio-site.jpg" target="_blank" rel="noopener">
-              <img src="images/portfolio-site.jpg" alt="Screenshot of this portfolio website" loading="lazy">
-            </a>
-            <div class="project-body">
-              <span class="tag">Claude Code · HTML · CSS · GitHub Pages</span>
-              <h3>This portfolio website</h3>
-              <p>Designed and built with Claude Code from plain-English instructions, then reviewed, corrected and published on GitHub Pages.</p>
-            </div>
-          </article>
-        </div>
+          </div>
       </div>
     </section>
 
@@ -275,13 +267,15 @@
               <li>AI agents with tools, and chatbots</li>
               <li>Prompt writing for Gemini, Claude and ChatGPT</li>
               <li>Lead scoring, sentiment analysis and drafting replies for approval</li>
+              <li>Email and marketing automation</li>
             </ul>
           </article>
           <article class="card service">
             <h3>Integrations and building</h3>
             <ul class="checklist">
               <li>APIs, webhooks and JSON</li>
-              <li>Airtable, Google Sheets, Gmail and data tables</li>
+              <li>HubSpot CRM: contacts, companies, deals and pipelines</li>
+              <li>Airtable, Google Sheets, Gmail, Telegram and data tables</li>
               <li>Conditional routing, testing and troubleshooting</li>
               <li>Claude Code, Lovable and React (working knowledge)</li>
             </ul>
